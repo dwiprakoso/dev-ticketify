@@ -20,7 +20,7 @@
                     <div class="relative z-0 w-full mt-5 mb-5 group">
                         <input type="number" name="qty" id="qty"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" " value="1" required />
+                            placeholder=" " value="1" required max="1" min="1"/>
                         <input type="hidden" name="price" id="price"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             value="{{ $ticket->price }}" required />
@@ -35,8 +35,8 @@
                         <p>Rp. {{ number_format($ticket->price, 0, ',', '.') }}</p>
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
-                        <h2>Internet Fee</h2>
-                        <p>Rp. 4.500</p>
+                        <h2>Admin Fee</h2>
+                        <p>Rp. 4.000</p>
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
                         <h2>Total Harga</h2>
@@ -59,24 +59,21 @@
                         class="block py-2.5 px-0 w-[1000px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " value="" required />
                     <label for="floating_first_name"
-                        class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full
-                        Name</label>
+                        class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nama Orang Tua</label>
                 </div>
                 <div class="relative z-0 w-full mt-5 mb-5 group">
                     <input type="text" name="first_name" id="first_name"
                         class="block py-2.5 px-0 w-[1000px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " value="" required />
                     <label for="floating_first_name"
-                        class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First
-                        Name</label>
+                        class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nama Anak</label>
                 </div>
                 <div class="relative z-0 w-full mt-5 mb-5 group">
                     <input type="text" name="last_name" id="last_name"
                         class="block py-2.5 px-0 w-[1000px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " value="" required />
                     <label for="floating_last_name"
-                        class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last
-                        Name</label>
+                        class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Umur Anak</label>
                 </div>
                 <div class="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 " role="alert">
                     <span class="font-medium">Warning!</span> Pastikan Email anda benar
@@ -93,11 +90,11 @@
                         class="block py-2.5 px-0 w-[1000px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " value="" required />
                     <label for="floating_users_email"
-                        class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone Number</label>
+                        class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">No Hp</label>
                 </div>
                 <div class="relative z-0 w-full mt-5 mb-5 group">
                     <div class="mt-2">
-                        <label for="datepicker-format" class="block text-gray-700">Birth Date</label>
+                        <label for="datepicker-format" class="block text-gray-700">Tanggal Lahir</label>
                         <div
                             class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer focus:outline-none">
                             <input name="birth_date" id="datepicker-format" datepicker datepicker-format="yyyy-mm-dd" type="text"
@@ -107,15 +104,15 @@
                     </div>
                 </div>
                 <div class="relative z-0 w-full mt-5 mb-5 group">
-                    <label class="block text-gray-700">Gender</label>
+                    <label class="block text-gray-700">Jenis Kelamin</label>
                     <div class="mt-1 flex space-x-4">
                         <label class="inline-flex items-center">
                             <input type="radio" name="gender" class="form-radio" value="male" />
-                            <span class="ml-2">Male</span>
+                            <span class="ml-2">Laki - Laki</span>
                         </label>
                         <label class="inline-flex items-center">
                             <input type="radio" name="gender" class="form-radio" value="female" />
-                            <span class="ml-2">Female</span>
+                            <span class="ml-2">Perempuan</span>
                         </label>
                     </div>
                 </div>
@@ -259,7 +256,7 @@
         function calculateTotalPrice() {
             let qty = parseInt(document.getElementById('qty').value) || 0;
             let price = {{ $ticket->price }};
-            let internetFee = 4500;
+            let internetFee = 4000;
             let totalPrice = qty * price + internetFee;
     
             document.getElementById('total-price').innerText = 'Rp. ' + totalPrice.toLocaleString();

@@ -52,7 +52,9 @@
                         <th scope="col" class="px-6 py-3">Tiket acara yang Dibeli</th>
                         <th scope="col" class="px-6 py-3">Pemesanan pada</th>
                         <th scope="col" class="px-6 py-3">No Transaksi</th>
-                        <th scope="col" class="px-6 py-3">Nama Pembeli</th>
+                        <th scope="col" class="px-6 py-3">Nama Orang Tua</th>
+                        <th scope="col" class="px-6 py-3">Nama Anak</th>
+                        <th scope="col" class="px-6 py-3">Usia Anak</th>
                         <th scope="col" class="px-6 py-3">Email Pembeli</th>
                         <th scope="col" class="px-6 py-3">Gender</th>
                         <th scope="col" class="px-6 py-3">No HP</th>
@@ -82,7 +84,9 @@
                             <td class="px-6 py-4 whitespace-nowrap">{{ $order->event->event_name }}</td>
                             <td class="px-6 py-4">{{ \Carbon\Carbon::parse($order->created_at)->translatedFormat('l, d F Y') }}</td>
                             <td class="px-6 py-4">{{ $order->no_transaction }}</td>
-                            <td class="px-6 py-4">{{ $order->first_name }} {{ $order->last_name }}</td>
+                            <td class="px-6 py-4">{{ $order->name_buyer }}</td>
+                            <td class="px-6 py-4">{{ $order->first_name }}</td>
+                            <td class="px-6 py-4">{{ $order->last_name }}</td>
                             <td class="px-6 py-4">{{ $order->email_buyer }}</td>
                             <td class="px-6 py-4">{{ $order->gender }}</td>
                             <td class="px-6 py-4">{{ $order->phone_number }}</td>
